@@ -5,7 +5,7 @@ extends PanelContainer
 @onready var childrenGrid = $VBoxContainer/MarginContainer2/CenterContainer/ChildrenGrid
 
 const PeaPlant = preload("res://Plant/PeaPlant/PeaPlant.tscn")
-const PeaPlant_GD = preload("res://Plant/PeaPlant/GD_PeaPlant.tres")
+const PeaPlant_GD = preload("res://Plant/PeaPlant/GD_PeaPlant_with_shape.tres")
 const ChildContainer = preload("res://UI/CrossBreedViewer/ChildContainer.tscn")
 
 var gene1: Plant = null:

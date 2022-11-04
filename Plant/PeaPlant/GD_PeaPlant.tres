@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource( "1" )
-genome_definition = null
+genome_definition = [[null], []]
 ploidy = 2
