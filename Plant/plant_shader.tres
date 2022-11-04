@@ -1,0 +1,16 @@
+[gd_resource type="Shader" format=3 uid="uid://beq5arlis5vwb"]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform sampler2D mask: filter_nearest;
+uniform vec4 fruit_color: source_color;
+
+void fragment(){
+	vec4 plant = texture(TEXTURE, UV);
+	vec4 fruit_mask = texture(mask, UV).rrra;
+	fruit_mask.a *= fruit_mask.r;
+	vec4 new_plant = plant*(1.0f-fruit_mask.a);
+	new_plant += fruit_color*fruit_mask.a*vec4(2, 2, 2, 2);
+	COLOR = new_plant;
+}"

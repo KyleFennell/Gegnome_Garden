@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d228h77ohx3dc"]
+
+[ext_resource type="Script" path="res://Items/Item.gd" id="1_li7vo"]
+[ext_resource type="Texture2D" uid="uid://doelj3mpmfvqu" path="res://Items/Tools/Clippers.png" id="2_8ugyx"]
+
+[resource]
+script = ExtResource( "1_li7vo" )
+name = ""
+texture = ExtResource( "2_8ugyx" )
+quantity = 1
+stackable = false
+remove_when_stack_empty = true
+quantity_depletes = false
+item_type = 2

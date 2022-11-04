@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvac46m7xpa0g"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_5y5i5"]
+[ext_resource type="PackedScene" uid="uid://ct84h7wd1mbp3" path="res://UI/GenomeViewer/GenotypeViewer.tscn" id="2_awp4d"]
+[ext_resource type="PackedScene" uid="uid://ctcpy32l6frrn" path="res://UI/CrossBreedViewer/CrossBreedViewer.tscn" id="3_5f21c"]
+[ext_resource type="Script" path="res://InventoryContainer.gd" id="4_6tjim"]
+[ext_resource type="PackedScene" uid="uid://ppy8f8hiqyos" path="res://UI/Inventory/InventoryDisplay.tscn" id="4_mikd8"]
+[ext_resource type="Resource" uid="uid://jg06mmeybt0h" path="res://UI/Inventory/HotBar.tres" id="6_cd82i"]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource( "1_5y5i5" )
+metadata/_edit_horizontal_guides_ = [-144.0]
+
+[node name="GenotypeViewer" parent="." instance=ExtResource( "2_awp4d" )]
+offset_right = -752.0
+offset_bottom = -512.0
+
+[node name="CrossBreedViewer" parent="." instance=ExtResource( "3_5f21c" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 832.0
+offset_right = 927.999
+offset_bottom = 34.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+
+[node name="InventoryContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 224.0
+offset_top = 136.0
+offset_right = 800.0
+offset_bottom = 464.0
+script = ExtResource( "4_6tjim" )
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryContainer"]
+offset_right = 576.0
+offset_bottom = 328.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VFlowContainer" type="VBoxContainer" parent="InventoryContainer/MarginContainer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 566.0
+offset_bottom = 318.0
+
+[node name="InventoryDisplay" parent="InventoryContainer/MarginContainer/VFlowContainer" instance=ExtResource( "4_mikd8" )]
+unique_name_in_owner = true
+
+[node name="HotBarDisplay" parent="InventoryContainer/MarginContainer/VFlowContainer" instance=ExtResource( "4_mikd8" )]
+unique_name_in_owner = true
+
+[node name="Hotbar" type="PanelContainer" parent="."]
+offset_left = 320.0
+offset_top = 544.0
+offset_right = 768.0
+offset_bottom = 600.0
+
+[node name="HotBarDisplay" parent="Hotbar" instance=ExtResource( "4_mikd8" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 448.0
+offset_bottom = 56.0
+inventory = ExtResource( "6_cd82i" )

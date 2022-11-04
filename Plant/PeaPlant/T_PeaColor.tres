@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b65fssq2agwsp"]
+
+[ext_resource type="Script" path="res://GenomeClasses/Trait.gd" id="1"]
+
+[resource]
+script = ExtResource( "1" )
+name = "PeaColor"
+alleles = ["G", "g"]
+dominant_presentations = {
+"G": Color(0.192157, 0.458824, 0.270588, 1),
+"g": Color(0.960784, 0.796078, 0.32549, 1)
+}
+codominant_presentations = {}
+property = "fruit_color"

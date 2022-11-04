@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx1t4tkxjt8gi"]
+
+[ext_resource type="Script" path="res://UI/CrossBreedViewer/ChildContainer.gd" id="1_vfej1"]
+
+[node name="ChildContainer" type="MarginContainer"]
+minimum_size = Vector2(0, 20)
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+script = ExtResource( "1_vfej1" )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_top = 20.0
+offset_bottom = 20.0
+size_flags_vertical = 8

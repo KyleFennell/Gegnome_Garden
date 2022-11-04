@@ -1,0 +1,11 @@
+[gd_resource type="FontData" format=3 uid="uid://5goraq04b2fi"]
+
+[resource]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/spacing_glyph = 0
+cache/0/16/0/spacing_space = 0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)

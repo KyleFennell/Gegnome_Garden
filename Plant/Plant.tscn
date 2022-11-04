@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://t0fhx5g1n6tq"]
+
+[ext_resource type="Texture2D" uid="uid://yq3jyfkytn8e" path="res://Plant/PeaPlant/pea_plant.png" id="1"]
+[ext_resource type="Script" path="res://Plant/Plant.gd" id="2"]
+[ext_resource type="Shader" uid="uid://beq5arlis5vwb" path="res://Plant/plant_shader.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://lsshl7dp0ro4" path="res://Plant/PeaPlant/pea_plant_mask.png" id="3_xg8k4"]
+
+[sub_resource type="ShaderMaterial" id="1"]
+resource_local_to_scene = true
+shader = ExtResource( "3" )
+shader_param/fruit_color = Color(0, 0.513726, 0, 1)
+shader_param/mask = ExtResource( "3_xg8k4" )
+
+[node name="Plant" type="Node2D"]
+script = ExtResource( "2" )
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource( "1" )
+texture = ExtResource( "1" )
+offset = Vector2(0, -7)

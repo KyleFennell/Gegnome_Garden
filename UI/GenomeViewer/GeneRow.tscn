@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://1kj21sqwfuuo"]
+
+[ext_resource type="Script" path="res://UI/GenomeViewer/GeneRow.gd" id="1_lq6i4"]
+
+[node name="GeneEntry" type="HBoxContainer"]
+offset_right = 984.0
+offset_bottom = 26.0
+size_flags_vertical = 3
+script = ExtResource( "1_lq6i4" )
+
+[node name="Panel" type="PanelContainer" parent="."]
+offset_right = 490.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="GeneNameLabel" type="Label" parent="Panel"]
+offset_right = 490.0
+offset_bottom = 26.0
+text = "Gene Name"
+horizontal_alignment = 1
+
+[node name="Panel2" type="PanelContainer" parent="."]
+offset_left = 494.0
+offset_right = 984.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="GenotypeLabel" type="Label" parent="Panel2"]
+offset_right = 490.0
+offset_bottom = 26.0
+text = "Genotype
+"
+horizontal_alignment = 1
+
+[node name="Panel3" type="PanelContainer" parent="."]
+visible = false
+offset_left = 658.0
+offset_right = 984.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="PresentationLabel" type="Label" parent="Panel3"]
+offset_right = 326.0
+offset_bottom = 26.0
+text = "Presentation"
+horizontal_alignment = 1

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c5hl0tyw2bavf"]
+
+[ext_resource type="Script" path="res://Items/Seeds/Item_Seed.gd" id="1_ikwrs"]
+[ext_resource type="Texture2D" uid="uid://b41darvm85l6k" path="res://Plant/PeaPlant/pea_item_round_mask.png" id="2_s2okf"]
+
+[resource]
+script = ExtResource( "1_ikwrs" )
+name = "Pea_Round"
+texture = ExtResource( "2_s2okf" )
+quantity = 1
+stackable = false
+remove_when_stack_empty = true
+quantity_depletes = true
+item_type = 1
+raw_genotype = null
+genotype = null
+identified = false
+color = null
