@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctcpy32l6frrn"]
+
+[ext_resource type="Script" path="res://UI/CrossBreedViewer/CrossBreedViewer.gd" id="1_k0dvr"]
+[ext_resource type="Texture2D" uid="uid://yq3jyfkytn8e" path="res://Plant/PeaPlant/pea_plant.png" id="2_yxi4n"]
+
+[sub_resource type="Shader" id="Shader_j386o"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec4 tint_color: source_color;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	COLOR.rgb = color.rgb * .3 + tint_color.rgb;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ak6ib"]
+shader = SubResource( "Shader_j386o" )
+shader_param/tint_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d6a0y"]
+resource_local_to_scene = true
+shader = SubResource( "Shader_j386o" )
+shader_param/tint_color = null
+
+[node name="CrossBreedViewer" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( "1_k0dvr" )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 360.0
+offset_bottom = 240.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+offset_right = 360.0
+offset_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer"]
+minimum_size = Vector2(0, 20)
+offset_left = 162.0
+offset_right = 198.0
+offset_bottom = 20.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+offset_top = 4.0
+offset_right = 16.0
+offset_bottom = 20.0
+size_flags_vertical = 8
+
+[node name="Parent1Preview" type="TextureRect" parent="VBoxContainer/CenterContainer/HBoxContainer/MarginContainer"]
+material = SubResource( "ShaderMaterial_ak6ib" )
+minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource( "2_yxi4n" )
+ignore_texture_size = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/CenterContainer/HBoxContainer"]
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 20.0
+size_flags_vertical = 8
+
+[node name="Parent2Preview" type="TextureRect" parent="VBoxContainer/CenterContainer/HBoxContainer/MarginContainer2"]
+material = SubResource( "ShaderMaterial_d6a0y" )
+minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource( "2_yxi4n" )
+ignore_texture_size = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+offset_top = 24.0
+offset_right = 360.0
+offset_bottom = 34.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/MarginContainer2"]
+offset_left = 10.0
+offset_right = 350.0
+
+[node name="ChildrenGrid" type="GridContainer" parent="VBoxContainer/MarginContainer2/CenterContainer"]
+offset_left = 170.0
+offset_right = 170.0
+columns = 4

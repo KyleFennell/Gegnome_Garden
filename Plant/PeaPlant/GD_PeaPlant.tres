@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://djp78hbwy3r5c"]
+
+[ext_resource type="Script" path="res://GenomeClasses/Genome_Definition.gd" id="1"]
+
+[resource]
+script = ExtResource( "1" )
+genome_definition = null
+ploidy = 2

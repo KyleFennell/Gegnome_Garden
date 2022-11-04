@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://ghp1h3d8d54o"]
+
+[ext_resource type="Script" path="res://Items/GroundItem.gd" id="1_2ald5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cwnvg"]
+radius = 10.0499
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_csmwo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_umbf2"]
+radius = 30.0
+
+[node name="GroundItem" type="Area2D"]
+unique_name_in_owner = true
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( "1_2ald5" )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( "CircleShape2D_cwnvg" )
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource( "ShaderMaterial_csmwo" )
+scale = Vector2(0.25, 0.25)
+
+[node name="MagnetArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MagnetArea"]
+shape = SubResource( "CircleShape2D_umbf2" )
+
+[connection signal="area_entered" from="." to="." method="_on_collision_area_area_entered"]
+[connection signal="area_entered" from="MagnetArea" to="." method="_on_magnet_area_area_entered"]

@@ -1,0 +1,91 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct84h7wd1mbp3"]
+
+[ext_resource type="Script" path="res://UI/GenomeViewer/GenotypeViewer.gd" id="1_tasmh"]
+
+[node name="GenotypeViewer" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource( "1_tasmh" )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1024.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_layout_mode = 1
+
+[node name="Headder" type="PanelContainer" parent="VBoxContainer"]
+offset_right = 1024.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Headder"]
+offset_right = 1024.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+text = "Genome Name"
+horizontal_alignment = 1
+
+[node name="Body" type="MarginContainer" parent="VBoxContainer"]
+offset_top = 30.0
+offset_right = 1024.0
+offset_bottom = 80.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainers" type="VBoxContainer" parent="VBoxContainer/Body"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 1014.0
+offset_bottom = 40.0
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer/Body/VBoxContainers"]
+offset_right = 1004.0
+offset_bottom = 26.0
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="VBoxContainer/Body/VBoxContainers/Header"]
+offset_right = 500.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Body/VBoxContainers/Header/Panel"]
+offset_right = 500.0
+offset_bottom = 26.0
+text = "Gene Name"
+horizontal_alignment = 1
+
+[node name="Panel4" type="PanelContainer" parent="VBoxContainer/Body/VBoxContainers/Header"]
+offset_left = 504.0
+offset_right = 1004.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Body/VBoxContainers/Header/Panel4"]
+offset_right = 500.0
+offset_bottom = 26.0
+text = "Genotype
+"
+horizontal_alignment = 1
+
+[node name="Panel5" type="PanelContainer" parent="VBoxContainer/Body/VBoxContainers/Header"]
+visible = false
+offset_left = 672.0
+offset_right = 1004.0
+offset_bottom = 26.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Body/VBoxContainers/Header/Panel5"]
+offset_right = 332.0
+offset_bottom = 26.0
+text = "Presentation"
+horizontal_alignment = 1
+
+[node name="GeneContainer" type="VBoxContainer" parent="VBoxContainer/Body/VBoxContainers"]
+offset_top = 30.0
+offset_right = 1004.0
+offset_bottom = 30.0

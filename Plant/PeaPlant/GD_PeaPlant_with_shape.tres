@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://GenomeClasses/Genome_Definition.gd" id="1"]
+[ext_resource type="Resource" path="res://Plant/PeaPlant/T_PeaColor.tres" id="1_ahhvm"]
+[ext_resource type="Resource" path="res://GenomeClasses/T_NonCoding.tres" id="2_7kin2"]
+[ext_resource type="Resource" path="res://Plant/PeaPlant/T_PeaHeight.tres" id="3_1aijg"]
+[ext_resource type="Resource" path="res://Plant/PeaPlant/T_PeaShape.tres" id="4_ay7ea"]
+
+[resource]
+script = ExtResource( "1" )
+genome_definition = [[ExtResource( "1_ahhvm" ), ExtResource( "2_7kin2" )], [ExtResource( "4_ay7ea" ), ExtResource( "3_1aijg" )]]
+ploidy = 2

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://UI/Inventory/InventoryDisplay.tscn" id="1_ioi66"]
+
+[node name="InventoryContainer" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1024.0
+offset_bottom = 600.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="InventoryDisplay" parent="MarginContainer" instance=ExtResource( "1_ioi66" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 1014.0
+offset_bottom = 590.0

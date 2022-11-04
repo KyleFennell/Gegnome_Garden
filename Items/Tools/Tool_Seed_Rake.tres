@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bcjnxekwvu13t"]
+
+[ext_resource type="Script" path="res://Items/Item.gd" id="1_li7vo"]
+[ext_resource type="Texture2D" uid="uid://busmuoqw5dhqi" path="res://Items/Tools/Seed_Rake.png" id="2_k07jr"]
+
+[resource]
+script = ExtResource( "1_li7vo" )
+name = ""
+texture = ExtResource( "2_k07jr" )
+quantity = 1
+stackable = false
+remove_when_stack_empty = true
+quantity_depletes = false
+item_type = 2

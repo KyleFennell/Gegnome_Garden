@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlodhf2tgla6i"]
+
+[ext_resource type="Shader" path="res://UI/Tinter.gdshader" id="1_kejrt"]
+[ext_resource type="Texture2D" uid="uid://gk2glm0ooen1" path="res://UI/highlight_tile.png" id="2_00m1b"]
+[ext_resource type="Texture2D" uid="uid://b41darvm85l6k" path="res://Plant/PeaPlant/pea_item_round_mask.png" id="2_k45j2"]
+[ext_resource type="Script" path="res://UI/Inventory/InventorySlot.gd" id="3_1fw1d"]
+[ext_resource type="FontData" uid="uid://c40af78ei6sb0" path="res://PixelRPG.ttf" id="4_vvhno"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_toq0f"]
+resource_local_to_scene = true
+shader = ExtResource( "1_kejrt" )
+shader_param/enabled = false
+shader_param/tint_color = Color(0, 0.745098, 0, 1)
+
+[sub_resource type="Font" id="Font_otvow"]
+data/0 = ExtResource( "4_vvhno" )
+
+[node name="MarginContainer" type="MarginContainer"]
+minimum_size = Vector2(20, 20)
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+script = ExtResource( "3_1fw1d" )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1022.0
+offset_bottom = 598.0
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ItemTexture" type="TextureRect" parent="MarginContainer"]
+material = SubResource( "ShaderMaterial_toq0f" )
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1018.0
+offset_bottom = 594.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( "2_k45j2" )
+stretch_mode = 5
+
+[node name="SelectedTexture" type="TextureRect" parent="."]
+visible = false
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1022.0
+offset_bottom = 598.0
+texture = ExtResource( "2_00m1b" )
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 294.0
+offset_right = 1022.0
+offset_bottom = 306.0
+theme_override_fonts/font = SubResource( "Font_otvow" )
+theme_override_font_sizes/font_size = 12

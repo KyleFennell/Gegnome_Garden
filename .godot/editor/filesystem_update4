@@ -1,0 +1,14 @@
+res://Plant/PeaPlant/PeaPlant.tscn
+res://UI/Inventory/HotBar.tres
+res://Items/Seeds/Pea_Generic.tres
+res://Plant/plant_shader.tres
+res://Plant/PeaPlant/T_PeaColor.tres
+res://Plant/PeaPlant/GD_PeaPlant.tres
+res://UI/Tinter.gdshader
+res://GenomeClasses/Genome.gd
+res://GenomeClasses/Genome_Definition.gd
+res://World.tscn
+res://UI.tscn
+res://Player/Player.tscn
+res://UI/Inventory/InventoryDisplay.tscn
+res://UI/Inventory/InventorySlot.tscn
